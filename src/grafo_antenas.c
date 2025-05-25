@@ -69,25 +69,6 @@ Grafo* criarGrafo(Antena* listaAntenas) {
         g->listvertices = v;
     }
 
-    // 2. Criar arestas entre antenas com mesma frequência
-    for (Vertice *v1 = g->listvertices; v1 != NULL; v1 = v1->proxvertice) {
-        for (Vertice *v2 = v1->proxvertice; v2 != NULL; v2 = v2->proxvertice) {
-            if (v1->antena->frequencia == v2->antena->frequencia) {
-                // Cria ligação v1 -> v2
-                Aresta *a1 = (Aresta*)malloc(sizeof(Aresta));
-                a1->destino = v2;
-                a1->proxaresta = v1->arestas;
-                v1->arestas = a1;
-
-                // Cria ligação v2 -> v1
-                Aresta *a2 = (Aresta*)malloc(sizeof(Aresta));
-                a2->destino = v1;
-                a2->proxaresta = v2->arestas;
-                v2->arestas = a2;
-            }
-        }
-    }
-
     return g;
 }
 

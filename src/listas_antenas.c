@@ -82,7 +82,7 @@ Antena* inserirAntenaOrdenada(Antena *lista, char frequencia, int x, int y) {
     Antena *atual = lista;
     while (atual->prox != NULL && ((atual->prox->x < x) || (atual->prox->x == x && atual->prox->y < y))) {
         atual = atual->prox;
-    }
+}
     // Insere a nova antena na posição encontrada
     nova->prox = atual->prox;
     atual->prox = nova;

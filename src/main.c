@@ -22,7 +22,7 @@ int menu() {
     printf(" 4.  Calcular efeitos nefastos\n");
     printf(" 5.  Listar antenas\n");
     printf(" 6.  Listar efeitos nefastos\n");
-    printf(" 7.  Criar grafo\n");
+    printf(" 7.  Criar grafo e Adicionar Arestas\n");
     printf(" 8.  Busca em Profundidade DFS\n");
     printf(" 9.  Sair\n");
     printf("================================================\n");
@@ -112,18 +112,20 @@ int menu() {
                 break;
 
             case 7: { // Criar o grafo
-            if (g == NULL) {
+                if (g == NULL) {
                 g = criarGrafo(listaAntenas);
-                if (g != NULL) {
-                    printf("Grafo criado com sucesso!\n");
-                } else {
-                    printf("Erro ao criar o grafo.\n");
-                }
-             } else {
-                printf("Grafo já criado!\n");
+            if (g != NULL) {
+                adicionarArestas(g); // <--- Adiciona esta linha!
+                printf("Grafo criado com sucesso!\n");
+            } else {
+                 printf("Erro ao criar o grafo.\n");
             }
-            break;
-            }  
+            } else {
+            printf("Grafo já criado!\n");
+            printf("Se quiser recriar o grafo, por favor reinicie o programa.\n");}
+
+             break;
+        }  
                
             case 8: { // DFS
             int idOrigem;
