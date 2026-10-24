@@ -1,47 +1,51 @@
-# MAIN-Repository
-Este e o meu Repositorio Principal.
+# Antenna Network Manager
 
-# Trabalho Pratico
+A C application that models antenna connections using **graphs and linked lists**, with insertion, removal, and cost analysis operations. Developed as coursework for **Advanced Data Structures**.
 
-# 📡 Sistema de Gestão de Antenas com Grafos  
-*Trabalho Prático da disciplina de Estruturas de Dados Avançadas*  
+## Technologies
 
-## 📌 Descrição  
-Sistema em C que modela conexões entre antenas usando **grafos** e **listas encadeadas**, com operações de inserção, remoção e análise de custos.  
+- C
+- GCC and GNU Make
+- Doxygen documentation
+- LaTeX project report
 
-## Autor
- | Numero | Nome |
- |--------|---------------------------------|
- | 31502  | Rodrigo Henrique Silva Pinheiro |
+## Getting started
 
-## 📂 Estrutura do Projeto  
-MAIN-Repository/
+### Requirements
 
-├── doc/                        # Documentação
-│   └── Relatorio em LaTex  
-├── doxdoc/                     # Documentação
-│   └── documentacao em doxygen         
-├── include/                    # Cabeçalhos (.h) públicos  
-│   ├── dados.h                 # Estruturas de dados  
-│   ├── grafo_antenas.h         # Operações do grafo  
-│   └── lista_antenas.h         # Manipulação de listas  
-├── src/                        # Código-fonte (.c)  
-│   ├── grafo_antenas.c         # Implementação do grafo  
-│   ├── lista_antenas.c         # Implementação das listas  
-│   └── main.c                  # Programa principal  
-├── antenas.txt                 # Arquivo de entrada (dados)  
-├── Makefile                    # Configuração de compilação  
-└── README.md                   # Documentação  
+Use GCC, GNU Make, and a shell with `mkdir` and `rm`, such as Linux, WSL, or a compatible Unix environment. Run the following commands from the repository root so the supplied input file remains accessible.
 
-## Compilar e Executar o Programa 
-    Para compilar o Programa use o comando:
+```sh
+git clone https://github.com/rpinheiror/MAIN-Repository.git
+cd MAIN-Repository
+make
+make run
+```
 
-        Make
+The Makefile builds `bin/main` from the C files in `src/`. The sample input is provided in [`antenas.txt`](antenas.txt).
 
-    Para Executar o Programa use o comando:
+To remove the compiled objects and executable:
 
-        Make run 
-    
-    Para limpar os executaveis use:
+```sh
+make clean
+```
 
-        make clean
+## Repository structure
+
+| Path | Purpose |
+| --- | --- |
+| [`src/`](src/) | C source code and application entry point |
+| [`include/`](include/) | Headers, data structures, graph and linked-list interfaces |
+| [`antenas.txt`](antenas.txt) | Sample antenna data |
+| [`Makefile`](Makefile) | Build, run, and cleanup targets |
+| [`doc/`](doc/) | Project report and documentation |
+| [`doxdoc/`](doxdoc/) | Doxygen documentation |
+| [`Projeto_EDA.pdf`](Projeto_EDA.pdf) | Assignment specification |
+
+## Documentation
+
+The original coursework materials and code identifiers are in Portuguese. See the project report in `doc/` and the API documentation in `doxdoc/` for additional detail.
+
+## Author
+
+**Rodrigo Henrique Silva Pinheiro** — student no. 31502.
